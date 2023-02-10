@@ -19,17 +19,30 @@
         {
             if (double.TryParse(Console.ReadLine(), out double number))
             {
-                if (number < 0)
+                while (number <= 0)
                 {
+                    if (number <= 0)
+                    {
+                        Console.WriteLine("Valor inválido.");
+                    }
                     while (!double.TryParse(Console.ReadLine(), out number))
                     {
                         Console.WriteLine("Valor inválido.");
                     }
+                    
                 }
-                else
+
+                return number;
+
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido.");
+                while (!double.TryParse(Console.ReadLine(), out number))
                 {
-                    return number;
+                    Console.WriteLine("Valor inválido.");
                 }
+
             }
             return number;
         }
