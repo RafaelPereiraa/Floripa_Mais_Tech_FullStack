@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        List<string> Opcoes = new List<string>() { "1 - Nova Conta", "2 - Depositar", "3 - Sacar", "4 - Exibir Saldo" };
+        List<string> Opcoes = new List<string>() { "1 - Nova Conta", "2 - Depositar", "3 - Sacar", "4 - Exibir Saldo", "5 - Sair" };
 
         List<ContaBancaria> contas = new List<ContaBancaria>();
 
@@ -16,10 +16,10 @@ internal class Program
 
             int escolha = 0;
 
-            while (escolha > 4 ^ escolha < 1)
+            while (escolha > 5 ^ escolha < 1)
             {
                 escolha = CheckNumber.Check("Escolha a opção desejada: ", false);
-                if (escolha < 5 & escolha > 0)
+                if (escolha <= 5 & escolha > 0)
                 {
                     break;
                 }
@@ -51,13 +51,15 @@ internal class Program
                         }
                         Console.Clear();
                         conta = CheckNumber.Check("Digite o id da conta: ");
-                        if (conta < 0 ^ conta > contas.Count)
+                        if (conta < 0 ^ conta > contas.Count-1)
                         {
                             Console.WriteLine("Conta inexistente");
+                            break;
                         }
                         else
                         {
-                            contas.Find(c => c.id == conta).Depositar();
+                            Console.WriteLine("Quanto deseja depositar: ");
+                            contas.Find(c => c.id == conta).Depositar(CheckNumber.CheckDouble());
                         }
                     }
                     break;
@@ -73,13 +75,19 @@ internal class Program
                         }
                         Console.Clear();
                         conta = CheckNumber.Check("Digite o id da conta: ");
-                        if (conta < 0 ^ conta > contas.Count)
+                        if (conta < 0 ^ conta > (contas.Count-1))
                         {
                             Console.WriteLine("Conta inexistente");
+                            break;
                         }
                         else
                         {
-                            contas.Find(c => c.id == conta).Sacar();
+                            ContaBancaria contaAtual = contas.Find(c => c.id == conta);
+                            Console.WriteLine("Digite sua senha: ");
+                            if (contaAtual.testaSenha(Console.ReadLine())) { 
+                                Console.WriteLine("Quanto deseja sacar?");
+                                contaAtual.Sacar(CheckNumber.CheckDouble());
+                            }
                         }
                     }
 
@@ -96,9 +104,10 @@ internal class Program
                         }
                         Console.Clear();
                         conta = CheckNumber.Check("Digite o id da conta: ");
-                        if (conta < 0 ^ conta > contas.Count)
+                        if (conta < 0 ^ conta > contas.Count-1)
                         {
                             Console.WriteLine("Conta inexistente");
+                            break;
                         }
                         else
                         {
@@ -107,7 +116,7 @@ internal class Program
                     }
                     break;
                 case 5:
-                    break;
+                    return;
                 default:
                     break;
             }

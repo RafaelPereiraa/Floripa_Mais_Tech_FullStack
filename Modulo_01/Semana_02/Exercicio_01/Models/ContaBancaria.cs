@@ -44,37 +44,28 @@ namespace Exercicio_03_04_05_06.Models
             }
         }
 
-        public void Depositar()
+        public void Depositar(double valor)
         {
-            Console.WriteLine("Quanto deseja depositar: ");
-            saldo += CheckNumber.CheckDouble();
+            saldo += valor;
             Console.WriteLine("Deposito efetuado com sucesso!");
             Console.WriteLine($"Seu saldo atual é de: {saldo}");
         }
 
-        public void Sacar()
+        public void Sacar(double valor)
         {
-            Console.WriteLine("Digite sua senha: ");
-            if (Console.ReadLine() != senha)
-            {
-                Console.WriteLine("Senha incorreta.");
-            }
-            else
-            {
-                Console.WriteLine("Quanto deseja sacar?");
-                double valorSaque = CheckNumber.CheckDouble();
-
-                if (valorSaque > saldo)
+            
+            
+                if (valor > saldo)
                 {
                     Console.WriteLine("Saldo indisponível.");
                     return;
                 }
                 else
                 {
-                    saldo -= valorSaque;
+                    saldo -= valor;
                     Console.WriteLine($"Saldo restante {saldo}");
                 }
-            }
+            
         }
 
         public override string ToString()
@@ -85,6 +76,18 @@ namespace Exercicio_03_04_05_06.Models
                 $"Tipo: conta {tipoDeConta}\n" +
                 $"Saldo: {saldo:N2}\n"
                 ;
+        }
+
+        internal bool testaSenha(string senha)
+        {
+            if (this.senha != this.senha)
+            {
+                Console.WriteLine("Senha incorreta.");
+                return false;
+            } else
+            {
+                return true;
+            }
         }
     }
 
