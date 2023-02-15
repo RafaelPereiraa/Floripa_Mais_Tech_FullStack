@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rafael\\Documents\\Programação\\Floripa Mais Tech FullStack\\Modulo_01\\Semana_02\\Exercicio_01\\Exercicio_03_04_05_06.csproj",
+      "projectUniqueName": "C:\\Users\\Rafael\\Documents\\Programação\\Floripa Mais Tech FullStack\\Modulo_01\\Semana_02\\Exercicio_03_04_05_06\\Exercicio_03_04_05_06.csproj",
       "projectName": "Exercicio_03_04_05_06",
-      "projectPath": "C:\\Users\\Rafael\\Documents\\Programação\\Floripa Mais Tech FullStack\\Modulo_01\\Semana_02\\Exercicio_01\\Exercicio_03_04_05_06.csproj",
+      "projectPath": "C:\\Users\\Rafael\\Documents\\Programação\\Floripa Mais Tech FullStack\\Modulo_01\\Semana_02\\Exercicio_03_04_05_06\\Exercicio_03_04_05_06.csproj",
       "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rafael\\Documents\\Programação\\Floripa Mais Tech FullStack\\Modulo_01\\Semana_02\\Exercicio_01\\obj\\",
+      "outputPath": "C:\\Users\\Rafael\\Documents\\Programação\\Floripa Mais Tech FullStack\\Modulo_01\\Semana_02\\Exercicio_03_04_05_06\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
