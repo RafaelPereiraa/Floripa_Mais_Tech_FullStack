@@ -28,4 +28,9 @@ public class AlunoRepository{
             return alunos;
         }
     }
+
+    public static AlunoModel FindById(int id)
+    {
+        return alunos.Where(x => x.Id == id).FirstOrDefault();
+    }
 }
