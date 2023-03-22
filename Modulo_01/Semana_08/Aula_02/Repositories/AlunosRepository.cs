@@ -18,7 +18,7 @@ public class AlunoRepository{
     };
 
 
-    public static List<AlunoModel> Listar(string? nome = null)
+    public static List<AlunoModel> Listar(string nome = null)
     {
         if (nome != null)
         {
