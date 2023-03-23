@@ -1,3 +1,5 @@
+using System.Globalization;
+using System.Text;
 using Aula_02.Models;
 
 namespace Aula_02.Repositories;
@@ -29,8 +31,11 @@ public class AlunoRepository{
         }
     }
 
-    public static AlunoModel FindById(int id)
+    public static AlunoModel FindById(int id) => alunos.Where(x => x.Id == id).FirstOrDefault();
+
+    public static AlunoDTO Cadastrar(AlunoDTO aluno)
     {
-        return alunos.Where(x => x.Id == id).FirstOrDefault();
+        alunos.Add(aluno);
+        return aluno;
     }
 }
