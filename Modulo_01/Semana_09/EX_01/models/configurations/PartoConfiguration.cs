@@ -11,8 +11,8 @@ namespace EX_01.models.configurations
             builder.Property(p => p.DataParto).IsRequired();
             builder.Property(p => p.HorarioParto).IsRequired();
 
-            builder.HasOne(p => p.Medico).WithMany(m => m.Partos).HasForeignKey(p => p.IdMedico);
-            builder.HasMany(p => p.Bebes).WithOne(b => b.Parto).HasForeignKey(b => b.IdParto);
+            builder.HasOne(p => p.Medico).WithMany(m => m.Partos).HasForeignKey(p => p.Id_Medico);
+            builder.HasMany(p => p.Bebes).WithOne(b => b.Parto).HasForeignKey(b => b.Id_Parto);
         }
     }
 }
