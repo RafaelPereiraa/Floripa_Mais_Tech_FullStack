@@ -1,5 +1,7 @@
 ﻿using EX_01.models;
+using EX_01.models.configurations;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace EX_01
 {
@@ -8,7 +10,6 @@ namespace EX_01
         public Bercario(DbContextOptions<Bercario> options) : base(options)
         {
         }
-
         public DbSet<Bebe> Bebes { get; set; }
         public DbSet<Mae> Maes { get; set; }
         public DbSet<Medico> Medicos { get; set; }
@@ -16,23 +17,10 @@ namespace EX_01
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Bebe>()
-                .HasOne(b => b.Mae)
-                .WithMany(m => m.Bebes)
-                .HasForeignKey(b => b.MaeId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<Bebe>()
-                .HasOne(b => b.Parto)
-                .WithMany(p => p.Bebes)
-                .HasForeignKey(b => b.PartoId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<Parto>()
-                .HasOne(p => p.Medico)
-                .WithMany(m => m.Partos)
-                .HasForeignKey(p => p.MedicoId)
-                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.ApplyConfiguration(new BebeConfiguration());
+            modelBuilder.ApplyConfiguration(new MaeConfiguration());
+            modelBuilder.ApplyConfiguration(new MedicoConfiguration());
+            modelBuilder.ApplyConfiguration(new PartoConfiguration());
         }
     }
 }

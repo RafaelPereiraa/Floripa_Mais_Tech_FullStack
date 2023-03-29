@@ -3,7 +3,7 @@
     public class Parto
     {
         public int Id { get; set; }
-        public int MedicoId { get; set; }
+        public int Id_Medico { get; set; }
         public Medico Medico { get; set; }
         public DateTime DataParto { get; set; }
         public TimeSpan HorarioParto { get; set; }
