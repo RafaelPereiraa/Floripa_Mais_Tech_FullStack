@@ -3,8 +3,8 @@ using EX_01.models.configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
-namespace EX_01
-{
+namespace EX_01;
+
     public class Bercario : DbContext
     {
         public Bercario(DbContextOptions<Bercario> options) : base(options)
@@ -22,5 +22,6 @@ namespace EX_01
             modelBuilder.ApplyConfiguration(new MedicoConfiguration());
             modelBuilder.ApplyConfiguration(new PartoConfiguration());
         }
+
     }
-}
+
