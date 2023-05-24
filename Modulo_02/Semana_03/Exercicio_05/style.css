@@ -1,0 +1,107 @@
+body {
+  background: linear-gradient(-45deg, #6f52ee, #3ce76f, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.formDivider {
+  display: flex;
+  flex-grow: 1;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  color: #f8f8f2;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  background-color: #44475a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 200px;
+}
+
+#lofiForm input,
+#lofiForm button,
+h1,
+#lofiForm div {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+#lofiForm input {
+  background-color: #6272a4;
+  color: #f8f8f2;
+}
+
+#lofiForm button {
+  background-color: #50fa7b;
+  color: #282a36;
+  cursor: pointer;
+}
+
+#lofiForm div {
+  color: #2e2e2e;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+#resultado {
+  text-align: center;
+  margin: 20px 0px;
+  color: #f8f8f2 !important;
+}
+
+.abaixo {
+  background-color: #23a6d5;
+  color: #282a36;
+}
+
+.normal {
+  background-color: #3ce76f;
+}
+
+.sobrepeso {
+  background-color: #9dee52;
+}
+
+.obesidade-um {
+  background-color: #ffee00;
+}
+
+.obesidade-dois {
+  background-color: #ff9d00;
+}
+
+.obesidade-tres {
+  background-color: #ff0000;
+}

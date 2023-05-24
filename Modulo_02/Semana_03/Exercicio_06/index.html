@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="formDivider">&nbsp;</div>
+    <div class="formDivider">
+        <div>
+            <h1>Calculadora de IMC</h1>
+        </div>
+        <div class="form-container">
+            <form id="lofiForm">
+                <div id="resultado"></div>
+                <input type="number" id="peso" placeholder="Peso">
+                <input type="number" id="altura" placeholder="Altura">
+                <button type="button" onclick="calcular()">Calcular</button>
+                <a href="./historico.html">histórico</a>
+            </form>
+        </div>
+    </div>
+
+    <div class="formDivider table">
+        <table id="tabela-resultados">
+            <tr>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>IMC</th>
+                <th>Resultado</th>
+            </tr>
+        </table>
+    </div>
+    <script src="imc.js"></script>
+</body>
+
+</html>

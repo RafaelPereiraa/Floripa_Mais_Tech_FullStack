@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(-45deg, #6f52ee, #3ce76f, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+table {
+    width: 80%;
+}
+
+table, th, td {
+    border: 1px solid #5f616ea6;
+}
+
+a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #f8f8f2;
+}
+
+h1 {
+    color: #f8f8f2;
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+.abaixo {
+    background-color: #23a6d5;
+    color: #282a36;
+}
+
+.normal {
+    background-color: #3ce76f;
+}
+
+.sobrepeso {
+    background-color: #9dee52;
+}
+
+.obesidade-um {
+    background-color: #ffee00;
+}
+
+.obesidade-dois {
+    background-color: #ff9d00;
+}
+
+.obesidade-tres {
+    background-color: #ff0000;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="historico.css">
+
+    <title>Historico</title>
+</head>
+<body>
+    <h1>Históricos</h1>
+
+  <table id="tabela-historicos">
+    <tr>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>IMC</th>
+      <th>Resultado</th>
+    </tr>
+  </table>
+
+  <a href="index.html">Voltar</a>
+
+  <script>
+    console.clear()
+    console.log(localStorage.getItem("linha"));
+    let linha = JSON.parse(localStorage.getItem("linha"));
+    let tabelaHistoricos = document.getElementById("tabela-historicos");
+    tabelaHistoricos.innerHTML = linha;
+  </script>
+</body>
+</html>
