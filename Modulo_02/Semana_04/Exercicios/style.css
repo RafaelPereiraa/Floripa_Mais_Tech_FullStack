@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #212121;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background-color: #363636;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+  }
+
+  .container > div {
+    justify-content: center;
+  }
+  
+  h1,
+  h2 {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  details {
+    display: flex;
+    flex-direction: column;
+    color: #f5f5f5;
+    margin: auto;
+    width: 800px;
+    transition: 2s;
+    
+  }
+  
+  .details-container{
+    width: 100%;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  input {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #363636;
+  }
+  
+  input.exercicio-03 {
+    width: 80px;
+  }
+  
+  #exercicio-04,
+  #exercicio-05-c,
+  #exercicio-05-s,
+  #exercicio-05-r {
+    background-color: #2196f3;
+  }
+  
+  #exercicio-04:hover,
+  #exercicio-05-c:hover,
+  #exercicio-05-s:hover,
+  #exercicio-05-r:hover {
+    background-color: #0f7ae5;
+  }
+  
