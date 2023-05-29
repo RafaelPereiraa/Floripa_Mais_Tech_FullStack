@@ -78,3 +78,41 @@ button05r.addEventListener('click', () => {
     objeto = localStorage.getItem('objeto')
     objeto = JSON.parse(objeto)
 })
+
+let button06u = document.getElementById("exercicio-06-u");
+let button06r = document.getElementById("exercicio-06-r");
+let countdown = document.getElementById("countdown");
+let relogiop = document.getElementById("relogio");
+let relogioRodando = false;
+let relogio;
+
+
+button06u.addEventListener('click', () => {
+    let contador = 5;
+    countdown.innerHTML = "Contando:" + contador;
+    let intervalo = setInterval(() => {
+        contador--;
+        countdown.innerHTML = "Contando:" + contador;
+        }, 1000);
+
+    setTimeout(() => {
+        clearInterval(intervalo);
+        countdown.innerHTML = "Contagem finalizada!";        
+    }, 5000);
+})
+
+button06r.addEventListener('click', () => {
+    let date2 = new Date;
+    relogiop.innerText = "Relógio: " + date2.toLocaleTimeString();
+    if (!relogioRodando){
+     contador = setInterval(() => {
+            date2 = new Date;
+            relogioRodando = true;
+            relogiop.innerText = "Relógio: " + date2.toLocaleTimeString();
+        }, 1000);
+    } else {
+        relogioRodando = false;
+        console.log("Parando relogio");
+        clearInterval(contador);
+    }
+})

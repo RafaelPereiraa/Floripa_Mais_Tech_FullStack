@@ -2,7 +2,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-wrap: wrap;
+    height: 100%;
     background-color: #212121;
     color: #ffffff;
     font-family: Arial, sans-serif;
@@ -16,7 +17,7 @@ body {
     background-color: #363636;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    height: 100vh;
+    height: 100%;
   }
 
   .container > div {
@@ -74,17 +75,31 @@ body {
     width: 80px;
   }
   
+  #exercicio-01,
+  #exercicio-02,
+  #exercicio-03,
   #exercicio-04,
   #exercicio-05-c,
   #exercicio-05-s,
-  #exercicio-05-r {
+  #exercicio-05-r,
+  #exercicio-06-u,
+  #exercicio-06-r {
     background-color: #2196f3;
   }
   
+  #exercicio-01:hover,
+  #exercicio-02:hover,
+  #exercicio-03:hover,
   #exercicio-04:hover,
   #exercicio-05-c:hover,
   #exercicio-05-s:hover,
-  #exercicio-05-r:hover {
+  #exercicio-05-r:hover,
+  #exercicio-06-u:hover,
+  #exercicio-06-r:hover {
     background-color: #0f7ae5;
   }
   
+  .relogios{
+    flex-direction: row;
+    justify-content: space-around;
+  }
