@@ -1,0 +1,98 @@
+body, html {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    flex-grow: 1;
+    margin: 10px;
+    background-color: #0f1620;
+    border-radius: 5px;
+}
+
+header{
+    margin: unset;
+    background-color: #223a5c;
+    color: #fff;
+    width: 100%;
+    min-height: 15%;
+}
+
+main{
+    margin: unset;
+    display: flex;
+    flex-grow: 1;
+}
+
+nav {
+    min-width: 20%;
+    background-color: aliceblue;
+    height: 100%;
+}
+
+.content{
+    width: 100%;
+    background-color: rgba(127, 255, 212, 0.151);
+}
+
+.busca{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+input{
+    all: unset;
+    background-color: rgb(140, 127, 255);
+    background-blend-mode: color-dodge;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #00000054;
+    width: 90%;
+    text-align: end;
+}
+
+button{
+    width: 10%;
+}
+
+.listagem-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-basis: 28%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #00000054;
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+    color: #0f1620;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}
+
