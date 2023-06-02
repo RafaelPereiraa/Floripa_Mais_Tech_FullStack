@@ -21,11 +21,11 @@ inputEmail.addEventListener("keypress", source => {
 inputEmail.addEventListener("blur", () => {
     let email = inputEmail.value;
     if (email.match(regexValidarEmail)) {
-        console.log("Email válido");
         inputEmail.classList.remove("invalid");
         inputEmail.classList.add("valid");
     } else {
-        console.log("Email inválido");
+        inputEmail.setCustomValidity("Email inválido");
+        inputEmail.reportValidity();
         inputEmail.classList.remove("valid");
         inputEmail.classList.add("invalid");
     }
@@ -39,11 +39,11 @@ inputPassword.addEventListener("keypress", source => {
 inputPassword.addEventListener("blur", () => {
     let senha = inputPassword.value;
     if (senha.match(regexValidarSenha)) {
-        console.log("Senha válida");
         inputPassword.classList.remove("invalid");
         inputPassword.classList.add("valid");
     } else {
-        console.log("Senha inválida");
+        inputPassword.setCustomValidity("Senha inválida - Precisa conter 10 letras, pelo menos uma maiúscula, uma minúscula e um número");
+        inputPassword.reportValidity();
         inputPassword.classList.remove("valid");
         inputPassword.classList.add("invalid");
     }
@@ -58,11 +58,11 @@ inputConfirmPassword.addEventListener("blur", () => {
     let senha = inputPassword.value;
     let confirmSenha = inputConfirmPassword.value;
     if (senha == confirmSenha && senha.match(regexValidarSenha) && confirmSenha.match(regexValidarSenha)) {
-        console.log("Senha confirmada");
         inputConfirmPassword.classList.remove("invalid");
         inputConfirmPassword.classList.add("valid");
     } else {
-        console.log("Senha não confirmada");
+        inputConfirmPassword.setCustomValidity("Senha não confere");
+        inputConfirmPassword.reportValidity();
         inputConfirmPassword.classList.remove("valid");
         inputConfirmPassword.classList.add("invalid");
     }
