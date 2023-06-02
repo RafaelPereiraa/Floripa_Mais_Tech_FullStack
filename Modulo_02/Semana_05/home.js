@@ -95,4 +95,21 @@ document.querySelector(".busca > input").addEventListener("keyup", (e) => {
   }
 )
 
+document.querySelector(".busca > button").addEventListener("click", (e) => {
+  let dadosFiltrados = []
+  let input = prompt("Digite o que deseja buscar")
+    listaDeDados.forEach((dado) => {
+      if (dado.titulo.toLowerCase().includes(input.toLowerCase()) || dado.subtitulo.toLowerCase().includes(input.toLowerCase())) {
+        dadosFiltrados.push(dado)
+      }
+    })
+    if (input == "") {
+      dadosFiltrados = listaDeDados
+    }
+    document.querySelector(".busca > input").value = input
+    gerarCards(dadosFiltrados)
+  }
+)
+
+
 gerarCards(listaDeDados);
