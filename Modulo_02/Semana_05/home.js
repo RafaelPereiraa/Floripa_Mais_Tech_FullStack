@@ -62,6 +62,7 @@ const listaDados = [
 ];
 
 if (sessionStorage.getItem("listaDados") == null) {
+  alert("Sim, eu não botei nada no header e no menu... desculpa");
   sessionStorage.setItem("listaDados", JSON.stringify(listaDados));
 }
 
