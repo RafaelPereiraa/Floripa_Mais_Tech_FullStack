@@ -4,7 +4,7 @@ const listaDados = [
     imagem:
       "https://images.unsplash.com/photo-1679913286917-9eb414421eb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     subtitulo:
-      "Random string to test the filter function of the search bar",
+      "Random string pra testar a busca blablabla",
   },
   {
     titulo: "Inteligência Artificial na Saúde",

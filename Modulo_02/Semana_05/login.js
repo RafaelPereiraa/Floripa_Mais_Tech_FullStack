@@ -16,7 +16,7 @@ loginBtn.addEventListener("click", source => {
     let user = users.find(user => user.email == email && user.password == password);
     if (user != null) {
         sessionStorage.setItem("loggedUser", JSON.stringify(user));
-        window.location.href = "index.html";
+        window.location.href = "home.html";
     } else {
         alert("Email ou senha incorretos");
     }

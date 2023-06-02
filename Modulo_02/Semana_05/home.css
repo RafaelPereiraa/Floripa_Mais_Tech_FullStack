@@ -2,17 +2,22 @@ body, html {
     display: flex;
     height: 100%;
     width: 100%;
-    margin: 0
+    align-items: flex-start;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    padding: 0;
     flex-grow: 1;
-    margin: 10px;
+    
+    padding: 0;
+    height: 100%;
     background-color: #0f1620;
     border-radius: 5px;
+    
 }
 
 header{
@@ -20,13 +25,15 @@ header{
     background-color: #223a5c;
     color: #fff;
     width: 100%;
-    min-height: 15%;
+    min-height: 20%;
 }
 
 main{
     margin: unset;
     display: flex;
     flex-grow: 1;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 nav {
@@ -37,7 +44,9 @@ nav {
 
 .content{
     width: 100%;
+    height: 100%;
     background-color: rgba(127, 255, 212, 0.151);
+    overflow-y: scroll;
 }
 
 .busca{

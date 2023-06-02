@@ -1,11 +1,17 @@
-body {
+html, body {
     background-color: #232c39;
     color: #fff;
     font-family: Arial, sans-serif;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin: 0
   }
   
   .container {
     width: 400px;
+    height: 400px;
     margin: 0 auto;
     padding: 20px;
     background-color: #0f1620;

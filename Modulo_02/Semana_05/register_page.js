@@ -81,7 +81,7 @@ registerBtn.addEventListener("click", source => {
         sessionStorage.setItem("users", JSON.stringify(users));
 
         alert("Cadastro realizado com sucesso!");
-        window.location.href = "index.html";
+        window.location.href = "login.html";
     } else {
         alert("Preencha os campos corretamente!");
         if (!inputConfirmPassword.classList.contains('valid')) {
