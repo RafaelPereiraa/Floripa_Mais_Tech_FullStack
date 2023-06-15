@@ -1,11 +1,30 @@
 <div>
-    <h1>Home</h1>
-    <p>Home works!</p>
+    <div>
+        <h1>Home</h1>
+        <p>Home works!</p>
+        <h2>Exercicio 01</h2>
+    </div>
 
-    <br>
-    <br>
-    
-    <input type="text" name="" id="" [(ngModel)]="texto" >
-    <p>{{texto}}</p>
+    <div>
+        <h2>Exercicio 02</h2>
+        <input type="text" name="" id="" [(ngModel)]="texto">
+        <p>{{texto}}</p>
+    </div>
+
+    <div>
+        <h2>Exercicio 03</h2>
+        <div class="calculator-container">
+            <input type="number" class="calculator-input" [(ngModel)]="numero01">
+            <input type="number" class="calculator-input" [(ngModel)]="numero02">
+            <div class="calculator-buttons">
+                <button (click)="somar()">+</button>
+                <button (click)="subtrair()">-</button>
+                <button (click)="multiplicar()">*</button>
+                <button (click)="dividir()">/</button>
+            </div>
+        </div>
+        <p><span>Resultado: {{resultado}}</span></p>
+        <button (click)="limpar()">Limpar</button>
+    </div>
 
 </div>
