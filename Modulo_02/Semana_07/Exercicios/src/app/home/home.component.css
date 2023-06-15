@@ -27,6 +27,10 @@ p{
     margin-bottom: 1em;
 }
 
+p:after {
+    content: '\200b';
+}
+
 div{
     display: flex;
     flex-direction: column;
