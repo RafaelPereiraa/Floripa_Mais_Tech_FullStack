@@ -33,22 +33,22 @@
         <form [formGroup]="formFilme" (ngSubmit)="onSubmit()">
             <div>
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" [(ngModel)]="nome">
+                <input type="text" name="nome" id="nome" formControlName="nome">
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" [(ngModel)]="email">
+                <input type="email" name="email" id="email" formControlName="email">
             </div>
             <div>
                 <label for="nomeFilme">Filme</label>
-                <input name="nomeFilme" id="nomeFilme" [(ngModel)]="nomeFilme">
+                <input name="nomeFilme" id="nomeFilme" formControlName="nomeFilme">
             </div>
             <div>
                 <label for="nota">Nota ({{ nota.value }})</label>
-                <input type="range" #nota (input)="nota.value" id="nota" min="0" max="10" value="0">
+                <input type="range" #nota (input)="nota.value" id="nota" min="0" max="10" value="0" formControlName="nota">
             </div>
             <div>
-                <button type="submit" [disabled]="nome === '' || email === '' || nomeFilme === ''">Enviar</button>
+                <button type="submit" class="submit-button">Enviar</button>
             </div>
         </form>
     </div>

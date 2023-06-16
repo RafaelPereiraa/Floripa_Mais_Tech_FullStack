@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -11,23 +11,27 @@ export class HomeComponent {
   numero01: number = 0;
   numero02: number = 0;
   resultado: number | undefined;
-  nome: string = '';
-  email: string = '';
-  nomeFilme: string = '';
-  nota: number = 0;
+
   formFilme: FormGroup;
 
   constructor() {
     this.formFilme = new FormGroup({
-      nome: new FormControl(''),
-      email: new FormControl(''),
-      nomeFilme: new FormControl(''),
+      nome: new FormControl('',Validators.required),
+      email: new FormControl('',[Validators.required, Validators.email]),
+      nomeFilme: new FormControl('',Validators.required),
       nota: new FormControl('')
     });
   }
 
   onSubmit(){
-    alert(`Voce avaliou o filme ${this.nomeFilme}!`);
+    if(this.formFilme.invalid){
+      this.formFilme.get('nome')?.errors ? alert('Nome é obrigatório!') : alert(`Obrigado ${this.formFilme.get('nome')?.value}!`);
+      this.formFilme.get('email')?.errors ? alert('Email é obrigatório!') : alert(`Obrigado ${this.formFilme.get('email')?.value}!`);
+      this.formFilme.get('nomeFilme')?.errors ? alert('Nome do filme é obrigatório!') : alert(`Obrigado ${this.formFilme.get('nomeFilme')?.value}!`);
+      alert('Formulário inválido!');
+      return;
+    }
+    alert(`Voce avaliou o filme ${this.formFilme}!`);
   }
 
 
