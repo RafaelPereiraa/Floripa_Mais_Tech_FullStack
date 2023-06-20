@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { ApiexerciciosService } from '../apiexercicios.service';
 
 @Component({
   selector: 'app-home',
@@ -11,16 +13,38 @@ export class HomeComponent {
   numero01: number = 0;
   numero02: number = 0;
   resultado: number | undefined;
+  filmes: any[] = [];
+  private subscription!: Subscription;
 
   formFilme: FormGroup;
 
-  constructor() {
+  constructor(private apiexerciciosService: ApiexerciciosService) {
     this.formFilme = new FormGroup({
       nome: new FormControl('', [Validators.required, Validators.minLength(3)]),
       email: new FormControl('', [Validators.required, Validators.email]),
       nomeFilme: new FormControl('', [Validators.required, Validators.minLength(3)]),
       nota: new FormControl(''),
     });
+  }
+
+
+
+  getFilmes() {
+    this.apiexerciciosService.getFilmes().subscribe(
+      {
+        next: (filmesApi: any) => {
+          this.filmes = filmesApi;
+          console.log(this.filmes);
+        },
+        error: (error: any) => {
+          console.log(error);
+        }
+      }
+    );
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   onSubmit() {
@@ -63,4 +87,11 @@ export class HomeComponent {
     this.numero02 = 0;
     this.resultado = undefined;
   }
+
+  async getAlunos() {
+    const resposta = await fetch('https://37aa4cce-9e6c-4ba1-89fa-c22aca00c2f6.mock.pstmn.io/alunos/get-all');
+    const alunos = await resposta.json();
+    console.log(alunos);
+  }
+  
 }
