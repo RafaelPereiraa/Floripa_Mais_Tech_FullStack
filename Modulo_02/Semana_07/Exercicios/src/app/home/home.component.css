@@ -1,97 +1,97 @@
-:host{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
+:host {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
-h1{
-    text-align: center;
-    font-size: 3em;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    margin-bottom: 0.5em;
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-bottom: 0.5em;
 }
 
-h2{
-    text-align: center;
-    font-size: 2em;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    margin-bottom: 0.5em;
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-bottom: 0.5em;
 }
 
-p{
-    text-align: center;
-    font-size: 1.5em;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    margin-bottom: 1em;
+p {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-bottom: 1em;
 }
 
 p:after {
-    content: '\200b';
+  content: "\200b";
 }
 
-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-.calculator-container{
-    all: unset;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.calculator-container {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.calculator-buttons{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
+.calculator-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.calculator-buttons > button{
-    width: 20px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin: 0.1em 0;
+.calculator-buttons > button {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0.1em 0;
 }
 
-.calculator-input{
-    all:unset;
-    width: 30%;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    background-color: #fff;
-    color: #000;
-    font-size: 1em;
-    text-align: right;
-    padding-right: 1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    margin-top: .2em;
+.calculator-input {
+  all: unset;
+  width: 30%;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+  font-size: 1em;
+  text-align: right;
+  padding-right: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-top: 0.2em;
 }
 
 input::-webkit-outer-spin-button,
@@ -100,18 +100,52 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
-    -moz-appearance: textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
-.divEx04{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
+.divEx04 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.divEx04 > form > div{
-    height: auto;
-    margin: 0;
+.divEx04 > form > div {
+  height: auto;
+  margin: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
 }

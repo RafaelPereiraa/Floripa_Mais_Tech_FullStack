@@ -18,4 +18,14 @@ export class ApiexerciciosService {
       },
     });
   }
+  
+  getCursos() {
+    return this.http.get(`${this.apiUrl}/cursos/get-all`, {
+      headers: {
+        'x-api-key': this.apiKey,
+      },
+    });
+  }
+
+
 }
