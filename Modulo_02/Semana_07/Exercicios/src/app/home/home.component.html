@@ -1,4 +1,4 @@
-<div>
+<div class="container">
     <div>
         <h1>Home</h1>
         <p>Home works!</p>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="divEx06">
-        <h2>Exercicio 06 que virou o 7 com observable e que carrega o 9</h2>
+        <h2 class="pisca">Exercicio 06 que virou o 7 com observable e que carrega o 9 E O 10</h2>
         <p>Service</p>
         <button (click)="getFilmes()">Fetch</button>
         <!-- <button>Fetch</button> -->
@@ -93,6 +93,22 @@
                 <h4>"notaIMDb": {{melhorFilme.notaIMDb}}</h4>
             </div>
         <!-- </div> -->
+    </div>
+
+    <div class="divEx10">
+        <h2>Exercicio 10</h2>
+        <p>3 melhores</p>
+            <div class="showFilme" *ngIf="showMovie">
+                <h3>{{ind+1}}º Lugar</h3>
+                <h4>"nomeFilme": {{melhoresTresFilmes[ind].nomeFilme}}</h4>
+                <h4>"anoLancamento": {{melhoresTresFilmes[ind].anoLancamento}}</h4>
+                <h4>"genero": {{melhoresTresFilmes[ind].genero}}</h4>
+                <h4>"diretor": {{melhoresTresFilmes[ind].diretor}}</h4>
+                <h4>"duracaoMinutos": {{melhoresTresFilmes[ind].duracaoMinutos}}</h4>
+                <h4>"notaIMDb": {{melhoresTresFilmes[ind].notaIMDb}}</h4>
+                <button [disabled]="ind <= 0">Anterior</button>
+                <button [disabled]="ind >= 2">Proximo</button>
+            </div>
     </div>
 
 </div>

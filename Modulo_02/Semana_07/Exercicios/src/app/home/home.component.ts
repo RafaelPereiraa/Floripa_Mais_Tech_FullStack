@@ -26,6 +26,8 @@ export class HomeComponent {
     duracaoMinutos: 0,
     notaIMDb: 0,
   };
+  melhoresTresFilmes: any[] = [];
+  ind = 0;
 
 
   
@@ -50,10 +52,18 @@ export class HomeComponent {
         next: (filmesApi: any) => {
           this.filmes = filmesApi;
           console.log(this.filmes);
-          this.melhorFilme = this.filmes.reduce( (prev, current) => { 
-            return (prev.notaIMDb > current.notaIMDb) ? prev : current
-        });
+          for(let i = 0; i < 3; i++){
+            this.melhoresTresFilmes.push(this.filmes.reduce( (prev, current) => {             
+              return (prev.notaIMDb > current.notaIMDb) ? prev : current
+            }));
+            this.filmes = this.filmes.filter( (filme) => {
+              return filme !== this.melhoresTresFilmes[i]
+            }
+            )
+          }
           this.showMovie = !this.showMovie;
+          this.melhorFilme = this.melhoresTresFilmes[0];
+          console.log(this.melhoresTresFilmes);
           alert(`O melhor filme é ${this.melhorFilme.nomeFilme}! Informações na div do filme`)
         },
         error: (error: any) => {
