@@ -17,6 +17,18 @@ export class HomeComponent {
   private subscription!: Subscription;
   showModal = false;
   loading = false;
+  showMovie = false;
+  melhorFilme: any = {
+    nomeFilme: '',
+    anoLancamento: '',
+    genero: '',
+    diretor: '',
+    duracaoMinutos: 0,
+    notaIMDb: 0,
+  };
+
+
+  
 
   formFilme: FormGroup;
 
@@ -32,19 +44,24 @@ export class HomeComponent {
     });
   }
 
-  // getFilmes() {
-  //   this.apiexerciciosService.getFilmes().subscribe(
-  //     {
-  //       next: (filmesApi: any) => {
-  //         this.filmes = filmesApi;
-  //         console.log(this.filmes);
-  //       },
-  //       error: (error: any) => {
-  //         console.log(error);
-  //       }
-  //     }
-  //   );
-  // }
+  getFilmes() {
+    this.apiexerciciosService.getFilmes().subscribe(
+      {
+        next: (filmesApi: any) => {
+          this.filmes = filmesApi;
+          console.log(this.filmes);
+          this.melhorFilme = this.filmes.reduce( (prev, current) => { 
+            return (prev.notaIMDb > current.notaIMDb) ? prev : current
+        });
+          this.showMovie = !this.showMovie;
+          alert(`O melhor filme é ${this.melhorFilme.nomeFilme}! Informações na div do filme`)
+        },
+        error: (error: any) => {
+          console.log(error);
+        }
+      }
+    );
+  }
 
   getCursos() {
     this.showModal = true;

@@ -61,16 +61,16 @@
     </div>
 
     <div class="divEx06">
-        <h2>Exercicio 06 que virou o 7 com observable</h2>
+        <h2>Exercicio 06 que virou o 7 com observable e que carrega o 9</h2>
         <p>Service</p>
-        <!-- <button (click)="getFilmes()">Fetch</button> -->
-        <button>Fetch</button>
+        <button (click)="getFilmes()">Fetch</button>
+        <!-- <button>Fetch</button> -->
     </div>
 
     <div class="divEx08">
         <h2>Exercicio 08</h2>
         <p>Loading</p>
-        <button (click)="getCursos()">Fetch</button>
+        <button (click)="getCursos()">Load</button>
 
         <div class="modal" tabindex="1" [ngClass]="{ 'd-block': loading }" *ngIf="showModal">
             <div class="modal-content">
@@ -78,6 +78,21 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="divEx09">
+        <h2>Exercicio 09</h2>
+        <p>Melhor Filme</p>
+        <!-- <div class="modal" tabindex="1" [(ngModel)]="{ 'd-block': loading }" *ngIf="showModal"> -->
+            <div class="showFilme" *ngIf="showMovie">
+                <h4>"nomeFilme": {{melhorFilme.nomeFilme}}</h4>
+                <h4>"anoLancamento": {{melhorFilme.anoLancamento}}</h4>
+                <h4>"genero": {{melhorFilme.genero}}</h4>
+                <h4>"diretor": {{melhorFilme.diretor}}</h4>
+                <h4>"duracaoMinutos": {{melhorFilme.duracaoMinutos}}</h4>
+                <h4>"notaIMDb": {{melhorFilme.notaIMDb}}</h4>
+            </div>
+        <!-- </div> -->
     </div>
 
 </div>
