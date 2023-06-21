@@ -1,0 +1,22 @@
+.footer {
+    background-color: #343a40; /* Cor de fundo do footer */
+    padding: 10px 0; /* Espaçamento interno do footer */
+}
+
+.footer h5 {
+    color: rgba(255, 255, 255, 0.7); /* Cor do título do footer */
+    margin: 0;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.5); /* Cor do texto de descrição */
+    margin: 0;
+}
+
+.footer ul li a {
+    color: rgba(255, 255, 255, 0.7); /* Cor dos links no footer */
+}
+
+.footer ul li a:hover {
+    color: #fff; /* Cor dos links no hover */
+}
