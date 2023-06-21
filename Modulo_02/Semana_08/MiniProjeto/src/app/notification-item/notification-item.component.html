@@ -1,0 +1,12 @@
+<li class="list-group-item" [ngClass]="{'read-item': read}" (click)="checkRead()">
+    <div>
+        <img [src]="item.thumb" alt="">
+    </div>
+    <div>
+        <p>{{item.title}}</p>
+        <p>{{item.subtitle}}</p>
+    </div>
+    <div>
+        <p>{{item.data}}</p>
+    </div>
+</li>

@@ -1,0 +1,7 @@
+<ul class="list-group">
+    <app-notification-header></app-notification-header>
+    <ng-container *ngFor="let item of notificationItems">
+        <app-notification-item [item]="item"></app-notification-item>
+    </ng-container>
+    <app-notification-footer></app-notification-footer>
+</ul>
