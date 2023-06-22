@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { NotificationListComponent } from './notification-list/notification-list.component';
 import { NotificationItemComponent } from './notification-item/notification-item.component';
 import { NotificationHeaderComponent } from './notification-header/notification-header.component';
@@ -16,7 +17,8 @@ import { NotificationFooterComponent } from './notification-footer/notification-
     NotificationFooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

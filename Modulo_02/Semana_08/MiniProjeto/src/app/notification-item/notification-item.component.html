@@ -1,12 +1,12 @@
 <li class="list-group-item d-flex justify-content-between " [ngClass]="{'read-item': read}" (click)="checkRead()">
-    <div class="col-auto">
+    <div class="thumb">
         <img class="bg-black h-100" [src]="item.thumb" alt="">
     </div>
-    <div class="col-8">
+    <div class="col-10">
         <p>{{item.title}}</p>
         <p>{{item.subtitle}}</p>
     </div>
-    <div class="col-auto">
+    <div class="col-1">
         <p>{{item.data}}</p>
     </div>
 </li>
