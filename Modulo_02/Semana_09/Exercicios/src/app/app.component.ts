@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  title = 'Exercicios';
+
   onSearchTextChanged(searchText: string) {
     console.log('Texto digitado:', searchText);
     // Faça aqui o que desejar com o texto digitado
