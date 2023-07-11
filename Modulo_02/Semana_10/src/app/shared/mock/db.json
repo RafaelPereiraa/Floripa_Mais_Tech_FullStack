@@ -1,0 +1,78 @@
+{
+    "comidas": [
+      {
+        "titulo": "Bife de Filé Mignon com Molho de Vinho Tinto",
+        "valor": 60,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Risoto de Cogumelos Selvagens",
+        "valor": 45,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Salmão Grelhado com Legumes Assados",
+        "valor": 55,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Frango à Parmegiana com Purê de Batatas",
+        "valor": 40,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Espaguete à Bolonhesa",
+        "valor": 35,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Hambúrguer de Quinoa com Batata Doce Frita",
+        "valor": 30,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      }
+    ],
+    "bebidas": [
+      {
+        "titulo": "Whisky",
+        "valor": 60,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Cerveja",
+        "valor": 45,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Vinho",
+        "valor": 55,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Suco natural",
+        "valor": 40,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Refrigerante",
+        "valor": 35,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      },
+      {
+        "titulo": "Suco Natural",
+        "valor": 30,
+        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolor!",
+        "urlImagem": "https://source.unsplash.com/random"
+      }
+    ]
+  }
